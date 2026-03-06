@@ -105,17 +105,7 @@ Mensaje amigable con emoji y descripción del error.
 
 ## 🔐 Variables de Entorno
 
-Crear archivo `.env.local` en la raíz de `frontend/`:
-
-```env
-NEXT_PUBLIC_GATEWAY_URL=http://localhost:4000
-```
-
-| Variable | Descripción | Requerido | Default |
-|----------|-------------|-----------|---------|
-| `NEXT_PUBLIC_GATEWAY_URL` | URL del Gateway | No | http://localhost:3000 |
-
-> **Nota:** Variables en Next.js que comienzan con `NEXT_PUBLIC_` son expuestas al navegador.
+Las variables de entorno necesarias se proporcionarán según las indicaciones del docente.
 
 ---
 
@@ -241,20 +231,7 @@ El frontend corre en puerto 8080 dentro del contenedor, pero se expone en el pue
 
 ---
 
-## 📈 Mejoras Futuras
-
-- [ ] Agregar historial de búsquedas
-- [ ] Implementar autocompletado de ciudades
-- [ ] Agregar pronóstico de 5 días
-- [ ] Implementar modo oscuro/claro
-- [ ] Agregar tests con Jest y React Testing Library
-- [ ] Implementar Progressive Web App (PWA)
-- [ ] Agregar internacionalización (i18n)
-- [ ] Implementar geolocalización automática
-
----
-
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Error: Cannot connect to Gateway
 **Problema:** Frontend no puede hacer peticiones al Gateway  
