@@ -16,7 +16,7 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [weather, setWeather] = useState<WeatherData | null>(null);
 
-  const GATEWAY_URL = process.env.NEXT_PUBLIC_GATEWAY_URL || "http://localhost:3000";
+  const GATEWAY_URL = process.env.NEXT_PUBLIC_GATEWAY_URL;
 
   const fetchWeather = async (e: React.FormEvent) => {
     e.preventDefault();
