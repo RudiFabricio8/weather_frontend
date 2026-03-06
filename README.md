@@ -105,17 +105,7 @@ Mensaje amigable con emoji y descripción del error.
 
 ## 🔐 Variables de Entorno
 
-Crear archivo `.env.local` en la raíz de `frontend/`:
-
-```env
-NEXT_PUBLIC_GATEWAY_URL=http://localhost:4000
-```
-
-| Variable | Descripción | Requerido | Default |
-|----------|-------------|-----------|---------|
-| `NEXT_PUBLIC_GATEWAY_URL` | URL del Gateway | No | http://localhost:3000 |
-
-> **Nota:** Variables en Next.js que comienzan con `NEXT_PUBLIC_` son expuestas al navegador.
+Las variables de entorno necesarias se proporcionarán según las indicaciones del docente.
 
 ---
 
@@ -186,75 +176,7 @@ interface WeatherData {
 
 ---
 
-## 🐳 Docker
-
-### Dockerfile
-```dockerfile
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
-COPY . .
-RUN npm run build
-EXPOSE 8080
-CMD ["npm", "start"]
-```
-
-### Puerto Mapping
-
-En `docker-compose.yml`:
-```yaml
-frontend:
-  ports:
-    - "5000:8080"  # Host:Container
-```
-
-El frontend corre en puerto 8080 dentro del contenedor, pero se expone en el puerto 5000 del host.
-
----
-
-## 🔗 Dependencias
-
-### Dependencies
-```json
-{
-  "react": "^19.0.0",
-  "react-dom": "^19.0.0",
-  "next": "15.2.0"
-}
-```
-
-### DevDependencies
-```json
-{
-  "typescript": "^5",
-  "@types/node": "^20",
-  "@types/react": "^19",
-  "@types/react-dom": "^19",
-  "tailwindcss": "^3.4.1",
-  "postcss": "^8.4.32",
-  "autoprefixer": "^10.4.16",
-  "eslint": "^9",
-  "eslint-config-next": "15.2.0"
-}
-```
-
----
-
-## 📈 Mejoras Futuras
-
-- [ ] Agregar historial de búsquedas
-- [ ] Implementar autocompletado de ciudades
-- [ ] Agregar pronóstico de 5 días
-- [ ] Implementar modo oscuro/claro
-- [ ] Agregar tests con Jest y React Testing Library
-- [ ] Implementar Progressive Web App (PWA)
-- [ ] Agregar internacionalización (i18n)
-- [ ] Implementar geolocalización automática
-
----
-
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### Error: Cannot connect to Gateway
 **Problema:** Frontend no puede hacer peticiones al Gateway  
